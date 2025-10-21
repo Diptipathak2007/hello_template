@@ -13,14 +13,15 @@ contract TestContract is Test {
     function testincrement() public {
         c.increment();
         c.increment();
-        assertEq(c.getnum(), 7);
+        assertEq(c.getnum(), 7,"ok");
     }
     function testdecrement() public {
         c.decrement();
         c.decrement();
-        assertEq(c.getnum(), 3);
+        assertEq(c.getnum(), 3,"ok");
     }
-    function testfaildecrement() public {
+    function testfaileddecrement() public {
+        c.decrement();
         c.decrement();
         c.decrement();
         c.decrement();

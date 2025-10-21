@@ -10,6 +10,7 @@ contract Counter {
         num += 1;
     }
     function decrement() public {
+        require(num > 0, "Cannot go below zero");
         num -= 1;
     }
     function getnum() public view returns (uint) {
