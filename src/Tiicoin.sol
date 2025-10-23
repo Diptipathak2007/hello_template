@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.13;
 import {ERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import {console} from "forge-std/console.sol";
 
 contract Tiicoin is ERC20 {
     uint256 public supply;
@@ -8,6 +9,7 @@ contract Tiicoin is ERC20 {
         
     }
     function mint(address to, uint256 amount) public {
+        console.log("Minting");
         _mint(to, amount);
     }
    
